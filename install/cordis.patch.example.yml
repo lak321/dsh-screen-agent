@@ -1,0 +1,7 @@
+# Add this row to your web profile's cordis.patch.yml:
+#   C:\Users\<you>\.dsh\profiles\web\cordis.patch.yml   (Windows)
+#   ~/.dsh/profiles/web/cordis.patch.yml                (macOS/Linux)
+
+- insert:
+    - id: screen-agent
+      name: 'dsh-screen-agent'

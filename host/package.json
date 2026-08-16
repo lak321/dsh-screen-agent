@@ -1,0 +1,8 @@
+{
+  "name": "dsh-screen-agent",
+  "description": "Desktop & web UI automation for DSH: full-screen capture, Windows OCR, mouse click/drag, typing, key press, window activate — plus a battle-tested Paint drawing capability (curve compensation, canvas positioning, brush sizing)",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "dependencies": {}
+}
