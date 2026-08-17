@@ -34,29 +34,18 @@
 
 ## 安装
 
-### 1. 放置插件包
+**一条命令（git 源，产物已入库，无需构建）：**
 
-把 `host/` 目录复制到你的 DSH 插件目录：
-
-```
-~/.dsh/profiles/node_modules/dsh-screen-agent/  ← host/ 内容
+```sh
+dsh plugin --profile web add "github:lak321/dsh-screen-agent#<commit>&path:/"
 ```
 
-> `~` = `C:\Users\<用户名>`（Windows）。
+> `<commit>` 换成最新提交号（见仓库主页）。或本地目录：`cd dsh-screen-agent && dsh plugin --profile web add .`
 
-### 2. 启用插件
+装完**重启 DSH**（`npx -y @deepseek-ai/dsh web`）生效。
 
-编辑 DSH web profile 配置 `~/.dsh/profiles/web/cordis.patch.yml`，追加：
-
-```yaml
-- insert:
-    - id: screen-agent
-      name: 'dsh-screen-agent'
-```
-
-配置示例见 [`install/cordis.patch.example.yml`](install/cordis.patch.example.yml)。
-
-### 3. 重启 DSH
+> 兼容 DSH Profile：**web**。
+> 旧的手动复制 `host/` 并注入 `cordis.patch.yml` 的方式已废弃，由 bundle 层栈安装替代。
 
 ```
 # 停止当前 DSH，然后重新启动
