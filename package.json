@@ -1,0 +1,25 @@
+{
+  "name": "dsh-screen-agent",
+  "version": "1.0.0",
+  "description": "Desktop & web UI automation for DSH: full-screen capture, Windows OCR, mouse click/drag, typing, key press, window activate, plus battle-tested Paint drawing capability",
+  "type": "module",
+  "main": "./host/lib/index.js",
+  "exports": {
+    ".": "./host/lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "host",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {},
+  "license": "MIT"
+}

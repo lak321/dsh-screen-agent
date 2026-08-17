@@ -1,0 +1,5 @@
+# dsh-screen-agent bundle: mount the Node half (capture/OCR/mouse/keyboard
+# automation routes). No client half.
+- insert:
+    - id: screen-agent
+      name: 'dsh-screen-agent'
